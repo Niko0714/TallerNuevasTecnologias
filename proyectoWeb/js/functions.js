@@ -11,3 +11,17 @@ $('#nuevoUsuario').click(
     }
     
 );
+$('#nuevoInsumo').click(
+    function(){
+        var insumo=$('#insumo').val();
+        var descripcion = $('#descripcion').val();
+        var cantidad = $('#cantidad').val();
+        $('#insumos tr:last').after('<tr><td>'+insumo+'</td><td>'+ descripcion+'</td><td>'+ cantidad+'</td></tr>');
+         $('#exampleModalinsumos').find('form')[0].reset();
+         $('#exampleModalinsumos').modal('toggle');
+       
+        
+        
+    }
+    
+);
